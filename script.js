@@ -5,7 +5,7 @@ document.getElementById('toggleSenha').addEventListener('click', function(){
     if(senhaInput.type === 'password'){
         senhaInput.type = 'text';
         icone.classList.remove('bi-eye-fill');
-        icone.classList.add('by-eye-slash-fill');
+        icone.classList.add('bi-eye-slash-fill');
     }else{
         senhaInput.type = 'password';
         icone.classList.remove('bi-eye-slash-fill');
@@ -21,13 +21,13 @@ document.getElementById('loginForm').addEventListener('submit', function(event){
     const mensagem = document.getElementById('mensagem');
 
     if(email === '' || senha === ''){
-        mensagem.innerHTML = '<div class=alert alert-danger>Preencha todos os campos!</div>';
+        mensagem.innerHTML = '<div class="alert alert-danger">Preencha todos os campos!</div>';
         return;
     }
 
     if(email === "senai@senai.com.br" && senha === '123456'){
-        window.location.href = painel.html;
+        window.location.href = 'painel.html';
     }else{
-        mensagem.innerHTML = '<div class=alert alert-warning>E-mail ou senha incorretos</div>';
+        mensagem.innerHTML = '<div class="alert alert-warning">E-mail ou senha incorretos</div>';
     }
 });
